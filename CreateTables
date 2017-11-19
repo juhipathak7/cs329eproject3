@@ -3,16 +3,23 @@ USE chalkboard;
 
 create table User(name varchar(40), email varchar(70), username varchar(30), password varchar(30));
 
-create table Skills(username varchar(30),skillpoints integer);
+create table SkillsTracker(username varchar(30), skillname varchar(40), points integer);
+
+create table Skills(username varchar(30), skillname varchar(40));
+
+#for skills to contain a skill name do a group by of the points by skill name, and write and if else function that defines if the skill points are higher than 40, they earn a skill. This skill gets added to the actual skills table
 
 create table QuestsCompleted(username varchar(30),Quest varchar(30));
 
-create table HomeworkGrades(username varchar(30),AssignmentName varchar(40),Homework Grade integer);
+#each quest will have a defined tag for what skill it is and how many points in the skill
+#function will be written that if the user passes, then it adds the username,skill name, and points into skill tracker
 
-create table ProjectGrades(username varchar(30),AssignmentName varchar(40),Project Grades integer);
+create table HomeworkGrades(username varchar(30),AssignmentName varchar(40),HomeworkGrade integer);
 
-create table QuizGrades(username varchar(30),AssignmentName varchar(40),Quiz Grades integer);
+create table ProjectGrades(username varchar(30),AssignmentName varchar(40),ProjectGrades integer);
 
-create table TestGrades(username varchar(30),AssignmentName varchar(40),Test Grades integer);
+create table QuizGrades(username varchar(30),AssignmentName varchar(40),QuizGrades integer);
+
+create table TestGrades(username varchar(30),AssignmentName varchar(40),TestGrades integer);
 
 
