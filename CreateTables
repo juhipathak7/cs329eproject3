@@ -1,0 +1,18 @@
+USE chalkboard;
+
+
+create table User(name varchar(40), email varchar(70), username varchar(30), password varchar(30));
+
+create table Skills(username varchar(30),skillpoints integer);
+
+create table QuestsCompleted(username varchar(30),Quest varchar(30));
+
+create table HomeworkGrades(username varchar(30),AssignmentName varchar(40),Homework Grade integer);
+
+create table ProjectGrades(username varchar(30),AssignmentName varchar(40),Project Grades integer);
+
+create table QuizGrades(username varchar(30),AssignmentName varchar(40),Quiz Grades integer);
+
+create table TestGrades(username varchar(30),AssignmentName varchar(40),Test Grades integer);
+
+
