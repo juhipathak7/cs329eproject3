@@ -1,7 +1,7 @@
 USE chalkboard;
 
 
-create table User(name varchar(40), email varchar(70), username varchar(30), password varchar(30));
+create table User(firstname varchar(40),lastname varchar(40), email varchar(70), username varchar(30), password varchar(30));
 
 create table SkillsTracker(username varchar(30), skillname varchar(40), points integer);
 
