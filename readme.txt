@@ -67,6 +67,8 @@ groups
 And it should show up with this:
 ec2-user wheel www
 
+Now keep typing! :
+
 sudo chown -R root:www /var/www
 
 sudo chmod 2775 /var/www
