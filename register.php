@@ -8,19 +8,29 @@ if($link === false){
 }
 
 
-$first_name = mysqli_real_escape_string($link, $_REQUEST['First_name']);
-$last_name = mysqli_real_escape_string($link, $_REQUEST['Last_name']);
-$email = mysqli_real_escape_string($link, $_REQUEST['Email']);
-$password = mysqli_real_escape_string($link, $_REQUEST['Password']);
+$f= $_POST['fname'];
+$l= $_POST['lname'];
+$e= $_POST['email'];
+$u= $_POST['username'];
+$p= $_POST['pwd'];
+
+$first_name = mysqli_real_escape_string($connection,$f);
+$last_name = mysqli_real_escape_string($connection,$l);
+$email = mysqli_real_escape_string($connection,$e);
+$username = mysqli_real_escape_string($connection,$u);
+$password = mysqli_real_escape_string($connection,$p);
  
 // attempt insert query execution
-$sql = "INSERT INTO User(firstname, lastname, email, password) VALUES ('$first_name', '$last_name', '$email', '$password')";
-if(mysqli_query($link, $sql)){
+$sql = "INSERT INTO `User` (`firstname`, `lastname`, `email`, `username`, `password`) VALUES ('$first_name', '$last_name', '$email', '$username', '$password')";
+
+//mysqli_query($link, $sql);
+if(mysqli_query($connection, $sql)){
     echo "Records added successfully.";
 } else{
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($connection);
 }
  
 // close connection
 mysqli_close($link);
+
 ?>
