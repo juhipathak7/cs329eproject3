@@ -1,3 +1,12 @@
+
+
+Here is the link to our website: ec2-54-200-163-169.us-west-2.compute.amazonaws.com
+
+Or this: 54.200.163.169
+
+
+
+
 ***********************************
 To access database:
 ***********************************
