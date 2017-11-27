@@ -36,6 +36,10 @@ Then in the terminal type:
 
 Cd desktop
 
+WARNING: if you’re being denied permission- type this in to terminal after cd desktop:
+
+Chmod 0600 key-pair.pem
+
 Then type:
 
 ssh -i "key-pair.pem" ec2-user@ec2-54-200-163-169.us-west-2.compute.amazonaws.com
